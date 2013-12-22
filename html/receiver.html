@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Tunebridge</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            .container {
+                margin-top: 100px;
+                text-align: center;
+            }
+        </style>
+        <div class="container">
+            <audio id="player" src="/media/test.mp3" controls></audio>
+            <p><a href="#" id="btn-play" class="btn btn-primary btn-lg">Play</a></p>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/static/js/receiver.js"></script>
+    </body>
+</html>
