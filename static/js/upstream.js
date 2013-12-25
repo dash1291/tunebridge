@@ -32,3 +32,13 @@ drop.ondrop = function (e) {
   xhr.open('POST', '/new_file');
   xhr.send(formData);
 };
+
+document.querySelector('#range-volume').onchange = function(e) {
+  console.log(this.value);
+  socket.emit('volume', this.value);
+};
+
+document.querySelector('#btn-play-pause').onclick = function(e) {
+  console.log('ere');
+  socket.emit('toggleState');
+};

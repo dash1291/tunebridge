@@ -33,9 +33,17 @@ function notifyClients(filename) {
 
 // socketio stuff
 io.sockets.on('connection', function (socket) {
-    socket.on('update', function() {
+    socket.on('update', function(d) {
         console.log('update rec');
         socket.broadcast.emit('changetrack', {});
+    });
+
+    socket.on('volume', function(d) {
+        socket.broadcast.emit('volume', d);
+    });
+
+    socket.on('toggleState', function(d) {
+        socket.broadcast.emit('toggleState', d);
     });
 });
 

@@ -13,12 +13,19 @@
                 margin-top: 100px;
                 text-align: center;
             }
+            #range-volume {
+                margin-top: 10px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div id="div-file-drop">
                 <span>Drag your file here</span>
+            </div>
+            <div>
+                <a href="#" id="btn-play-pause" class="play btn btn-primary btn-lg">Play/Pause</a>
+                <p><span>Volume </span><input id="range-volume" type="range" min="0" max="100" value="50"></p>
             </div>
         </div>
         <script src="/socket.io/socket.io.js"></script>
